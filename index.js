@@ -14,8 +14,11 @@ mongoose.connect('mongodb://localhost/CRMdb', {
 });
 
 //middleware setup
-app.use(express.json())
+app.use(express.json());
+
 routes(app);
+
+
 
 app.get('/', (req, res) => res.send(`Node and express server running on PORT ${PORT}`))
 
